@@ -6,11 +6,8 @@ const Constraint = Matter.Constraint;
 var engine, world, backgroundImg;
 var canvas, angle, tower, ground, cannon;
 
+// 01) matriz para guardar balas
 
-// 01) matriz para guardar balas. MATRIZ PODE GUARDAR OUTRAS
-var balls = [];
-
-// 02) EM ARRAY2 -> demonstrar 2 formas de guardar valores em matriz e como acessar
 
 function preload() {
   backgroundImg = loadImage("assets/background.gif");
@@ -49,38 +46,26 @@ function draw() {
   pop();
 
 
-  // 07) chamar showCannonBalls em um FOR que envia cada bola para showCannonBalls (listaBolas[i])
+  // 05) chamar showCannonBalls em um FOR que envia cada bola para ela
   for(var counter = 0; counter == balls.lenght - 1; counter++){
-    showCannonBalls(balls[counter]);
+    
   }
 
   cannon.display();
 }
 
-// 03) função keyPressed -> cria novo obj da classe cannonBall na mesma pos cannon
+// 02) função keyPressed -> cria nova cannonBall na mesma posição do canhão
 function keyPressed(){
-    
-    if(keyCode === 32){
-      var cannonBall = new CannonBall(cannon.x, cannon.y);
-      balls.push(cannonBall);
-    }
-
-   
+  
 }
 
-
-// 06) função showCannonBalls( ball )
-
-function showCannonBalls( ball ){
-  if(ball){
-    ball.display();
-  }
-}
-
-// 08) função keyReleased -> dispara a bola chamando shoot()
-
+// 03) função keyReleased -> dispara a bola chamando shoot()
 function keyRealesed(){
 
 }
 
-// 09) ALUNO EM CANNONBALL -> criar matriz que puxa posições onde bola passou
+// 04) função showCannonBalls( ball )
+function showCannonBalls( ball ){
+  
+}
+
