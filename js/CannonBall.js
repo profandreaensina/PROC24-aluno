@@ -5,11 +5,9 @@ class CannonBall {
     };
     this.r = 30;
     this.body = Bodies.circle(x, y, this.r, options);
-    this.image = loadImage("./assets/cannonball.png");
+    this.image = loadImage("assets/cannonball.png");
     
     World.add(world, this.body);
-
-    // 09) matriz da trajetória - puxa posições onde bola passou
   }
 
   shoot() {
@@ -29,11 +27,5 @@ class CannonBall {
     imageMode(CENTER);
     image(this.image, pos.x, pos.y, this.r, this.r);
     pop();
-
-    // 10) if -> vel > 0 e posição x > 300z
-        // 11) var posi = [    this.body.posi.x,     this.,body.posi,y     ]
-        // 12) this.trajetoria.push(posi)
-
-    // 13) for desenha bola em cada posição da lista
   }
 }
